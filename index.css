@@ -1,0 +1,76 @@
+* {
+    font-family: 'Fraunces', serif;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(-45deg, rgb(174, 92, 212), rgb(123, 29, 151), rgb(99, 66, 131), #552e86);
+    background-size: 400% 200%;
+    animation: gradient 20s ease infinite;  
+}
+
+@keyframes gradient {     0% {         background-position: 0% 50%;     }     50% {         background-position: 100% 50%;     }     100% {         background-position: 0% 50%;     } }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: rgb(66, 65, 66);
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #313131;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px rgba(17, 17, 17, 0.122)
+}
+
+button:active {
+    background-color: #242424;
+}
+
+button:focus {
+    outline: none;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #131212;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#valor-atual {
+    font-size: 1.5em;
+}
+
+#valor-anterior {
+    font-size: 2em;
+}
